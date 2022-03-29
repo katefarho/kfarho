@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+/* CSS variables*/ 
+
+
+html {
+	box-sizing: border-box;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	color: white;
+	
+}
+
+body {
+	background: white; 
+	margin: 30px 50px; 
+	line-height: 1.4; 
+}
+
+img {
+	max-width: 100%;
+}
+
+p {
+	margin: 0; 
+	padding: 1em 0; 
+}
+
+.m-container {
+	display: grid; 
+	grid-gap: 20px;
+	grid-template-columns: 25% 50% 25%;
+	grid-template-rows: auto 50% 25% 25% ;
+	grid-template-areas:
+		"header header header"
+		"nav logo logo"
+		"nav main main"
+		"nav boxes na"
+}
+
+/*Corner logo*/
+.m-container header {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	font-size: 42px; 
+	justify-self: start;
+	align-self: flex-start; 
+}
+
+/*Navigation*/
+.main-nav {
+	grid-column: 1/2;
+	grid-row: 2/3;
+	grid-gap: 20px;
+}
+.main-nav ul {
+	justify-self: end;
+	align-self: center;
+	padding: 0;
+	list-style: none;
+	
+}
+
+/* Main Logo container*/
+.main-logo-container {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	justify-self: end;
+	align-self: center;
+}
+
+/*main page boxes */
+.main-page-boxes {
+	grid-column: 2/3;
+	grid-row: 3/4;
+}
